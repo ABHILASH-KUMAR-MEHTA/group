@@ -1,0 +1,104 @@
+.info-card {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.65); // Semi-transparent white
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 140px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  @media (min-width: 320px) and (max-width: 374px) {
+    width: 240px;
+    margin-bottom: 10px;
+  } // Smooth hover effect
+
+  @media (min-width: 375px) and (max-width: 411px) {
+    width: 260px;
+    margin-bottom: 10px;
+  }
+  @media (min-width: 412px) and (max-width: 424px) {
+    width: 280px;
+    margin-bottom: 10px;
+  }
+
+  @media (min-width: 425px) and (max-width: 539px) {
+    width: 300px;
+    margin-bottom: 10px;
+  }
+  @media (min-width: 540px) and (max-width: 768px) {
+    width: 340px;
+    font-size: 120px;
+  }
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+    width: 240px;
+  }
+
+  @media (min-width: 1024px) {
+    width: 220px;
+  }
+
+  &:hover {
+    transform: translateY(-10px); // Move card slightly upward
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); // Slightly larger shadow for depth
+  }
+
+  .icon {
+    width: 2.5rem;
+    height: 2.4rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 1.125rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5rem;
+
+    @media (min-width: 768px) {
+      font-size: 1.25rem;
+    }
+  }
+
+  .description {
+    color: #666;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 0.75rem;
+
+    @media (min-width: 768px) {
+      font-size: 1rem;
+    }
+  }
+
+  .read-more {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: black;
+    text-align: left;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex; // Aligns text and symbol
+    align-items: center;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #7b2d4f;
+
+      .symbol {
+        margin-left: 1rem; // Symbol moves on hover
+      }
+    }
+
+    .symbol {
+      font-size: 0.9rem;
+      margin-left: 0.5rem;
+      transition: margin-left 0.3s ease; // Smooth animation for symbol
+    }
+  }
+}
